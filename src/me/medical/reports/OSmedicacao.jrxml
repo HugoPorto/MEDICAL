@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OSmedicacao" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1671279d-eca1-4b73-9d04-a71c08f5ec45">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="26"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\RelatorioConsultorio\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="datapedido" class="java.lang.String"/>
+	<field name="setor" class="java.lang.String"/>
+	<field name="qtd" class="java.lang.String"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="solicitante" class="java.lang.String"/>
+	<field name="medicacao" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="6" width="802" height="55" forecolor="#C0C0C0" uuid="3f209374-373b-4598-8020-f74a6a50b148"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="183" y="16" width="336" height="45" forecolor="#000000" uuid="0835d438-3cf0-4347-afaa-b0eb7aefc148"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OS Entrega Medicação]]></text>
+			</staticText>
+			<image>
+				<reportElement x="31" y="16" width="115" height="45" uuid="9ab6db42-d0eb-468a-87fb-cdd34d98c5d4"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="575" y="28" width="135" height="33" uuid="b790dca3-ba61-4654-8915-e5ebd6e8eb60"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Via Posto Enfermagem]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="-8" width="801" height="39" backcolor="#C0C0C0" uuid="22077ace-e0e6-40e2-a19b-6b0393428dc5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="99" y="1" width="91" height="20" uuid="11e301d6-488e-472a-b630-406a3ac35ef0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Pedido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="1" width="134" height="20" uuid="5f812d93-970a-45b0-8367-87d97d7033e3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Setor ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="1" width="90" height="20" uuid="1b03ddfc-043a-4b84-876d-09e0bfb959b5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="1" width="90" height="20" uuid="bed8a374-d979-49ca-ab64-3936faef416f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="631" y="1" width="90" height="20" uuid="3233e6a2-e3df-4c6f-be81-8ced0640b9cf"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="0" width="70" height="20" uuid="ed9b48da-1600-411c-884d-4cc78e076e5c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código OS:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="196" splitType="Stretch">
+			<textField>
+				<reportElement x="84" y="0" width="143" height="20" uuid="e680d973-2262-449d-b723-8efc1b9da94e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datapedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="174" height="20" uuid="2bdefce0-bf23-4c17-818c-90490faddf2a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{setor}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="59" width="801" height="39" backcolor="#C0C0C0" uuid="fcf0f92a-a274-44c7-9bdd-d3483446f9f0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="18" y="69" width="128" height="20" uuid="ec4b5fb5-8c72-4097-b18d-9bc79cbfcdba"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicação Solicitada]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="417" y="1" width="55" height="20" uuid="b77ee0c3-affb-4f2e-8d73-f6c47b225cc7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="1" width="121" height="20" uuid="838b94e0-597e-465c-b4ff-4790a6414e4d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="98" width="799" height="98" uuid="45901a80-44fa-4e81-8a41-04bfe67cab30"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="631" y="1" width="170" height="20" uuid="70bbc710-a35c-44de-b36f-5d08bf2dd500"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="14" y="1" width="57" height="20" forecolor="#FF0000" uuid="52846fc3-fc56-449f-aaa5-a3322e82a486"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="131" splitType="Stretch">
+			<line>
+				<reportElement x="270" y="60" width="249" height="1" uuid="4b0aa798-f769-4f94-914d-4b6833f2d84f"/>
+			</line>
+			<staticText>
+				<reportElement x="320" y="61" width="67" height="20" uuid="b70bc07c-fa66-4ece-ad7a-dcc9d05af3a3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Solicitante:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="387" y="62" width="143" height="20" uuid="19d82505-44a5-4678-8157-e0c9d573422b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{solicitante}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="0" width="799" height="54" forecolor="#CCCCCC" uuid="f66013fb-5c29-4bae-9f01-e62778953056"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="18" y="21" width="189" height="20" uuid="8f6d4b28-57aa-4249-8c43-277eb39d9126"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Setor Responsável pela entrega:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="21" width="222" height="20" uuid="7e0d75c6-7258-409c-af56-892089311e0b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FARMÁCIA CENTRAL DA UNIDADE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="673" y="1" width="128" height="20" uuid="7057a144-084e-4015-b2ec-39b2386b126c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data da Impressão:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="692" y="21" width="82" height="20" uuid="7178ded9-b89f-4eed-bf20-ab62209fb5cc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="24" splitType="Stretch"/>
+	</summary>
+</jasperReport>

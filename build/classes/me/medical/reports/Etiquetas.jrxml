@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Etiquetas" pageWidth="368" pageHeight="226" columnWidth="328" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7abdb5a1-538c-431a-9123-16ba1090585c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="prontuario" class="java.lang.String"/>
+	<field name="data" class="java.lang.String"/>
+	<field name="nomepaciente" class="java.lang.String"/>
+	<field name="tipoacomodacao" class="java.lang.String"/>
+	<field name="numero" class="java.lang.String"/>
+	<field name="leito" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="186" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="4" y="0" width="320" height="186" uuid="957060d8-0a13-4f38-8527-a2324da21499"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="15" y="79" width="303" height="35" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="915c05a6-e9d0-4453-851c-cb2d454174de"/>
+				<graphicElement>
+					<pen lineWidth="1.25"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="118" y="79" width="134" height="35" forecolor="#000000" uuid="f5f7955e-b828-4a76-bfe5-67fb079a686d"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VISITANTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="118" width="58" height="20" uuid="2f1e6131-aed5-45a1-ae5c-dc7fbc3139ed"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paciente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="142" width="40" height="20" uuid="ac42ef1a-e6ae-412f-89fd-4326bbd6c385"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Setor:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="27" y="13" width="158" height="66" uuid="a76eb440-19ce-4dd7-ac94-b497d18bd3cb"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.JPG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="188" y="142" width="58" height="20" uuid="b1e749b8-56ad-412c-b5c2-97b2a8b80fe8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="161" width="40" height="20" uuid="1644e462-1a22-4ba0-a4b7-0d52b9481ab8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Leito:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="120" width="245" height="20" uuid="d49f2531-a552-426a-985f-a3751d20561a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomepaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="143" width="130" height="20" uuid="35ba7505-6b0d-4ab1-a289-b210ff434f16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoacomodacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="143" width="72" height="20" uuid="87caa252-187b-4aed-b998-0dd5839ceae2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="161" width="59" height="20" uuid="58f419db-0500-4c7a-a388-6da725cb752c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leito}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="162" width="97" height="20" uuid="52eea3a8-5d22-46be-9983-44c58639ce3b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Internação:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="112" y="163" width="100" height="20" uuid="e67ac560-62f4-4616-8328-dcd81bdc609e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

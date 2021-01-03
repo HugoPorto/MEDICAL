@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f49ecfa1-596c-472e-9516-d84c4e87b01d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="data" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="prescricao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="10" width="115" height="45" uuid="4057e8b8-bfda-42bd-b873-e5f64a1bcbc7"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="554" y="22" width="145" height="33" uuid="fb5499d0-0273-41ed-8a5d-7a0fb72606a0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Via Posto Enfermagem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="10" width="305" height="45" forecolor="#000000" uuid="c79827f7-ff7a-4d97-8648-b46241de6b46"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prescrição Médica]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="801" height="39" backcolor="#C0C0C0" uuid="1b035b16-2003-45e1-9ec2-2c77a0844be7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="554" y="8" width="90" height="20" uuid="b29777c2-81e0-4606-8337-24f938a7fd8a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prescrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="8" width="91" height="20" uuid="13e71d71-7881-435a-b74e-ac5526956903"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Consulta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="8" width="134" height="20" uuid="7e280862-72bf-4745-ad71-03b1aa919372"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome Paciente]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="164" splitType="Stretch">
+			<textField>
+				<reportElement x="405" y="11" width="397" height="149" uuid="972ede6e-2525-4ca9-aff1-8a1bd1f2a199"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prescricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="10" width="143" height="20" uuid="8837d05c-725d-4175-a40a-84fa7999f47c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="153" y="10" width="252" height="20" uuid="621cb89b-fc5b-4ddc-bcab-abc6b662a6f2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="84" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="719" y="64" width="82" height="20" uuid="d28843f3-788f-47a5-8ebc-df1f37b4abcb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="319" y="31" width="168" height="20" uuid="661401ff-8f5a-4748-90b4-73f98c48b0ee"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Carimbo Médico Solicitante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="64" width="128" height="20" uuid="2cf94ea6-7c31-4be8-a338-b86d1168e212"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data da Impressão:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="269" y="30" width="249" height="1" uuid="3f161792-765b-4af8-9f38-5cb470e3e1bf"/>
+			</line>
+		</band>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

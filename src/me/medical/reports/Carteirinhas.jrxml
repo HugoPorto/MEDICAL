@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Carteirinhas" pageWidth="450" pageHeight="700" columnWidth="410" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7abdb5a1-538c-431a-9123-16ba1090585c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     tb_agenda.`codigo` AS codigo,
+     tb_agenda.`DataCadastro` AS DataCadastro,
+     tb_agenda.`documentoPaciente` AS documentoPaciente,
+     tb_agenda.`NomePaciente` AS NomePaciente,
+     tb_agenda.`foto` AS foto
+FROM
+     `tb_agenda` tb_agenda]]>
+	</queryString>
+	<field name="codigo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DataCadastro" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="documentoPaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NomePaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="foto" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="204" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="8" y="0" width="392" height="197" uuid="957060d8-0a13-4f38-8527-a2324da21499"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="15" y="101" width="379" height="35" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="915c05a6-e9d0-4453-851c-cb2d454174de"/>
+			</rectangle>
+			<textField>
+				<reportElement x="73" y="142" width="195" height="20" uuid="18dab1d4-1fc3-4a7c-81d4-f144785bb121"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NomePaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="170" width="46" height="20" uuid="c50b450d-89df-4d6b-a39f-6b20935c122e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="142" width="103" height="20" uuid="47a2e9c8-c449-4810-acf0-2fab3c46fea2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{documentoPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="170" width="65" height="20" uuid="6f9f7a02-006c-460c-85da-5e60b83859bc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DataCadastro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="143" y="109" width="149" height="20" forecolor="#000000" uuid="f5f7955e-b828-4a76-bfe5-67fb079a686d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Carteira de Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="142" width="58" height="20" uuid="2f1e6131-aed5-45a1-ae5c-dc7fbc3139ed"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paciente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="170" width="59" height="20" uuid="bb6a9d39-275c-4731-acc5-ec361196892e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inscrição:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="143" width="26" height="20" uuid="ac42ef1a-e6ae-412f-89fd-4326bbd6c385"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="170" width="87" height="20" uuid="966709ce-f8c3-419e-994c-760c800d653d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Cadastro:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="55" y="26" width="158" height="66" uuid="a76eb440-19ce-4dd7-ac94-b497d18bd3cb"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.JPG"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="292" y="7" width="100" height="87" uuid="4e3186ef-7604-4e84-bc64-1aed1d3f44db"/>
+			</rectangle>
+			<image>
+				<reportElement x="305" y="15" width="113" height="77" uuid="1e129ed1-ec43-4f04-8beb-0236df1d8902"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" columnCount="2" pageWidth="595" pageHeight="842" columnWidth="277" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4a71a7f6-a2dd-49cc-a140-bfc2767718dd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nomepaciente" class="java.lang.String"/>
+	<field name="documento" class="java.lang.String"/>
+	<field name="registro" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="192" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="5" width="276" height="182" uuid="0df46ba9-5950-44ab-95d3-c8e4a8299af4"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="138" width="99" height="20" uuid="10514042-bc38-46b3-85b4-d093ccb3e2d3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome Paciente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="138" width="163" height="20" uuid="058d1657-3286-4d22-af1a-7ab051e7e40c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomepaciente}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="98" width="276" height="29" backcolor="#CCCCCC" uuid="92e0b39e-8aa5-4485-a8a2-1f8872bfc545"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="158" width="76" height="20" uuid="4dcda54d-914b-4078-8616-196534b66a48"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="158" width="100" height="20" uuid="4d121dbd-ccc1-4d38-afe7-26274672e5e2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{documento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="103" width="185" height="20" forecolor="#000000" uuid="2bd69f97-a462-45f0-91e8-8f5d8bf8126b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Identificação do Paciente]]></text>
+			</staticText>
+			<image>
+				<reportElement x="26" y="17" width="217" height="70" uuid="4300a95b-2082-4d2a-995b-33fc10db27f9"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.JPG"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="243" y="158" width="22" height="20" uuid="3437c3f6-6de3-41ec-b3d6-ba7fa9f4031a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{registro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="186" y="158" width="57" height="20" uuid="6b7924f0-eedc-4632-9eea-98fb01d524c7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registro:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

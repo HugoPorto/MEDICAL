@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MedicosCadastrados" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2bde409-385a-4ffe-9008-f16881aa2071">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from tbmedicos;]]>
+	</queryString>
+	<field name="idMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NomeMedico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EspecialidadeMedico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Crm" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Uf" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EnderecoMedico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TelefoneMedico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CidadeMedico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="UfMedico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="96" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="554" height="92" forecolor="#000000" backcolor="#FFFFFF" uuid="a9bc544c-e3d9-4f57-9fe1-b4d0d6d35bfa"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="147" y="24" width="399" height="45" forecolor="#000000" uuid="80b8a2a8-d4df-47f7-aa59-9b0dfa6f16c7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Profissionais Cadastrados]]></text>
+			</staticText>
+			<image>
+				<reportElement x="5" y="22" width="145" height="44" uuid="add1fd78-f3df-42d7-b638-d59a20ead430"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="11" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="554" height="36" backcolor="#CCCCCC" uuid="fb8a0f86-7f88-462c-add3-219ecac939ae"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="473" y="10" width="67" height="20" uuid="850e26a4-fc92-4cd5-b3e7-4b7c8e11bbd5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="10" width="133" height="20" uuid="cc5b2725-6b1f-404f-86e0-9c4d0566f0f1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME PROFISSIONAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="10" width="100" height="20" uuid="2b850e2a-78af-4fb0-a530-8799eb260f91"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESPECIALIDADE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="10" width="34" height="20" uuid="2e8b6998-1572-4e62-9b36-677947075ae7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CRM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="10" width="21" height="20" uuid="ac47893f-848a-4535-8e0f-78b5a6157ce1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UF]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="171" height="20" uuid="c8c758ab-91c8-4281-b0b8-8994fad9e048"/>
+				<textFieldExpression><![CDATA[$F{NomeMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="0" width="134" height="20" uuid="e138856b-465d-4d04-91ed-0e6a8bffddb1"/>
+				<textFieldExpression><![CDATA[$F{EspecialidadeMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="0" width="56" height="20" uuid="2f7c4b18-9580-423e-bc50-1ce162436b86"/>
+				<textFieldExpression><![CDATA[$F{Crm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="0" width="38" height="20" uuid="6eb059fb-e08b-4805-afca-7a8e751b3cdc"/>
+				<textFieldExpression><![CDATA[$F{Uf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="0" width="82" height="20" uuid="8421117b-cdf6-4caf-af14-d94f40a4e295"/>
+				<textFieldExpression><![CDATA[$F{TelefoneMedico}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="9" width="128" height="20" uuid="067381bb-de2b-4da5-82f4-d2061da4cfdb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data da Impressão:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="486" y="9" width="68" height="20" uuid="22ab4876-6d14-4358-8c1d-3d05f43180bd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="15" width="552" height="38" forecolor="#CCCCCC" uuid="4a8f8ea9-a343-402b-8ce7-030bd83ea33e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="69" y="26" width="448" height="13" uuid="a149057a-623d-47e0-8e48-03ea676021d7"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço: Rua 123 N.203 Qd F44 Lt 21 - Setor Sul - Goiânia - GO / Telefone: (62) 3954-1230]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

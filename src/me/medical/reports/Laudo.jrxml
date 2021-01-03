@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Laudo Medico" language="groovy" pageWidth="523" pageHeight="697" columnWidth="483" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c3c8aab2-51e2-4e91-a401-ac4462478337">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="nomepaciente" class="java.lang.String"/>
+	<field name="nomemedico" class="java.lang.String"/>
+	<field name="datalaudo" class="java.lang.String"/>
+	<field name="titulolaudo" class="java.lang.String"/>
+	<field name="tipoexame" class="java.lang.String"/>
+	<field name="obslaudo" class="java.lang.String"/>
+	<field name="conclusaolaudo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="0" width="481" height="77" forecolor="#C0C0C0" uuid="2077cd0e-f663-4136-9cd7-ffbfa8d132ae"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="152" y="19" width="315" height="45" forecolor="#000000" uuid="5cffbdf1-773a-4f54-a49d-678ae2044598"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laudo Médico]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="18" width="133" height="51" uuid="4d450555-00f2-4933-bcfc-a261722da73b"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="483" height="59" forecolor="#CCCCCC" uuid="0bb882f7-5f4d-4b66-8e12-28c41eb8258d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="9" width="128" height="20" uuid="036e4930-6579-45bb-8782-90ae580b6a3d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data do Atendimento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="33" width="128" height="20" uuid="cfb73415-1458-4e21-aa6b-e89126586b6f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome do Paciente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="138" y="33" width="341" height="20" forecolor="#0000FF" backcolor="#0000FF" uuid="8fa73d75-c7ef-432b-8542-2147814cdb8b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomepaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="9" width="192" height="20" forecolor="#0000FF" uuid="e3983823-8b4d-4def-a452-939ca1449b7b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datalaudo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="337" y="9" width="120" height="20" uuid="73936b40-6ef0-4a96-9c23-64d8765aed5d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código de Cadastro:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="458" y="9" width="25" height="20" uuid="a0c41b55-ef04-4daa-936a-ce29f806ced8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="378" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="212" width="483" height="128" forecolor="#CCCCCC" uuid="e355c27c-d8bb-49c7-8ca3-b0389a1f661d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="62" width="483" height="139" forecolor="#CCCCCC" uuid="8a400e60-9914-46bc-801e-c837489c3085"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="12" y="352" width="128" height="20" uuid="7eeec1e9-0016-42ee-a4c9-2ceef1d224db"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data da Impressão:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="385" y="352" width="82" height="20" uuid="4a8f061a-161c-4dbe-8c2b-f0ef1600fb8c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="10" width="94" height="20" uuid="8767e884-5561-45c5-93a4-7f7459e82a4f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Titulo do Laudo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="104" y="10" width="375" height="20" uuid="a5aa3759-b2bb-46ab-b8de-98cd4c559f76"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulolaudo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="34" width="94" height="20" uuid="1156494f-b998-4272-b7a4-73a20d5055df"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Exame:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="104" y="34" width="375" height="20" uuid="6094d597-3c61-460f-8047-c90158851cd6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoexame}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="62" width="133" height="20" uuid="323e6dc6-d636-4d95-9031-d8201e873afc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observação do Laudo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="82" width="469" height="109" uuid="511e77ae-9f4f-4396-afa0-ef040999306c"/>
+				<textFieldExpression><![CDATA[$F{obslaudo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="212" width="133" height="20" uuid="a63f6bae-baca-471c-870f-b79066ff41e9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Conclusão do Laudo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="7" y="232" width="469" height="98" uuid="fc95595c-a2ae-43b3-9eef-c67841caa5a1"/>
+				<textFieldExpression><![CDATA[$F{conclusaolaudo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="87" splitType="Stretch">
+			<line>
+				<reportElement x="119" y="54" width="229" height="1" uuid="007806e5-9fc9-440d-875f-4faa23c362e8"/>
+			</line>
+			<staticText>
+				<reportElement x="143" y="54" width="187" height="20" uuid="38624761-57ee-406d-a715-06dbd0b91087"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Carimbo e assinatura do Médico]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="41" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="13" width="476" height="28" forecolor="#CCCCCC" uuid="19a73511-4922-4686-b68b-7b9e5e1a9a3c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="19" y="22" width="448" height="13" uuid="75e5d7ce-1150-463b-802e-bb54315c5fda"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço: Rua 123 N.203 Qd F44 Lt 21 - Setor Sul - Goiânia - GO / Telefone: (62) 3954-1230]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="17" splitType="Stretch"/>
+	</summary>
+</jasperReport>

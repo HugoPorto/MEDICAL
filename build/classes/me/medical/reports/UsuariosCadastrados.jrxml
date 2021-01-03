@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="UsuariosCadastrados" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eb408db6-3c8f-4239-a83d-fd537453cd6a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from usuarios;]]>
+	</queryString>
+	<field name="iduser" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DataCadastro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Login" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Senha" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Perfil" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="554" height="97" forecolor="#000000" backcolor="#FFFFFF" uuid="bc9233ea-472f-46a0-bb5d-85370e03cfd7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="194" y="28" width="347" height="45" forecolor="#000000" uuid="e8dbbe20-9615-4866-8ee7-e146ff9c1189"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuários Cadastrados]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="29" width="148" height="44" uuid="4a3d8e3b-176a-4ade-aa38-1bfbe40ff4a1"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="554" height="1" uuid="4778b0be-d7e2-4415-a887-5e2798624e8c"/>
+			</line>
+			<rectangle>
+				<reportElement x="1" y="1" width="554" height="36" backcolor="#CCCCCC" uuid="1147b6be-b82e-451b-a13f-8c296263e32c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="20" y="11" width="88" height="20" uuid="713fabad-369a-48f0-94f8-585a86428586"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID USUÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="11" width="113" height="20" uuid="3b5d229f-e024-408c-9235-1b5d46623ef4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA CADASTRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="11" width="100" height="20" uuid="da2a6909-8648-46fc-ad25-05934621523c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME USUÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="11" width="107" height="20" uuid="7f58ae45-d188-4528-86a2-a8f8f9c186ea"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERFIL USUÁRIO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="0" width="57" height="20" uuid="ab30824a-218c-47ae-a277-d8fd3ef7fccd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{iduser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="0" width="100" height="20" uuid="5759ca0f-855d-421c-a95c-ac5bd328a975"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DataCadastro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="0" width="150" height="20" uuid="59b68a37-2dd3-470d-99bd-faeab75b1f4b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="0" width="59" height="20" uuid="59a8c3d8-26cc-4a31-9c0a-1b90d6df167a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Perfil}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="25" width="128" height="20" uuid="8adccf3e-596e-47c3-8186-9a429f2d463c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data da Impressão:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="486" y="25" width="68" height="20" uuid="c6f51664-1fef-42ac-bfdd-ba2c3265c762"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="55" splitType="Stretch">
+			<rectangle>
+				<reportElement x="2" y="8" width="552" height="38" forecolor="#CCCCCC" uuid="0ad0cc1f-bb29-48d6-a9db-5f690b2ffe40"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="61" y="20" width="448" height="13" uuid="302883ff-0026-4084-9447-fe9c30128d54"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço: Rua 123 N.203 Qd F44 Lt 21 - Setor Sul - Goiânia - GO / Telefone: (62) 3954-1230]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="13" splitType="Stretch"/>
+	</summary>
+</jasperReport>

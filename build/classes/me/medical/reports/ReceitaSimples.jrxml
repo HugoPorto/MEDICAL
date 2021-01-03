@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReceitaSimples" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0b765e6a-a95d-404b-9ed9-f89f3d88a6a4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="data" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="prescricao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="73" forecolor="#C0C0C0" uuid="c7c24522-fc19-49a1-8867-015c584a4b97"/>
+			</rectangle>
+			<image>
+				<reportElement x="9" y="14" width="158" height="53" uuid="24dbc69a-5f26-4da1-80b7-3cfed0e2384c"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="219" y="16" width="294" height="42" forecolor="#000000" uuid="7d905843-1749-4d4b-b76f-1b7ed3f5272e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Receituário]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="8" width="555" height="45" forecolor="#CCCCCC" uuid="904b280a-e651-4fb4-95ab-db084c312a8b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="22" width="128" height="20" uuid="47f3b781-83e3-40d1-894b-4147225da71f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data do Atendimento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="22" width="100" height="20" forecolor="#0000FF" uuid="dd7b6611-3342-4abc-a10b-3ac091a0d5b3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="6" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="469" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="49" forecolor="#CCCCCC" uuid="76bd5ea0-e2fe-416b-bbee-aaad7aa890e0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="49" width="555" height="294" forecolor="#CCCCCC" uuid="f88093df-3ac6-4893-b6a5-d126e4db30ee"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="7" y="13" width="99" height="20" uuid="8f7dd8ef-6e5f-43fa-81fd-fb44feda13ad"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome Paciente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="63" width="99" height="20" uuid="7c21c842-5bdb-459f-a1b6-e9a967824f2e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prescrição:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="153" y="429" width="249" height="1" uuid="2b42b3b2-091e-4daa-8bf8-24e53ee56926"/>
+			</line>
+			<staticText>
+				<reportElement x="229" y="429" width="132" height="20" uuid="7388b23b-3233-4192-bdfd-a7977ac3c421"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Médico]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="13" width="443" height="20" forecolor="#0000FF" uuid="f0cea483-e722-45f5-a4a9-595a087763d5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="88" width="541" height="244" uuid="1bff22bd-657c-42de-b467-2fcb83d34241"/>
+				<textFieldExpression><![CDATA[$F{prescricao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="23" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="473" y="3" width="82" height="20" uuid="cf973d62-db49-40ce-91b4-8a58037ee92f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="2" width="128" height="20" uuid="ce3a7813-8c1d-46e3-b71c-70c8d3c8c952"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data da Impressão:]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="54" forecolor="#CCCCCC" uuid="75147239-1d44-46e3-850b-6ad7f7245262"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="60" y="24" width="448" height="13" uuid="b0e52fc5-1291-4a52-89bd-22151a656e74"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço: Rua 123 N.203 Qd F44 Lt 21 - Setor Sul - Goiânia - GO / Telefone: (62) 3954-1230]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

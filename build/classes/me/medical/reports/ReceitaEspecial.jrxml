@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReceitaEspecial" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe5021b6-3042-460a-a5f4-c1328b90cf72">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="32"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="data" class="java.lang.String"/>
+	<field name="nomepaciente" class="java.lang.String"/>
+	<field name="nomemedico" class="java.lang.String"/>
+	<field name="crm" class="java.lang.String"/>
+	<field name="uf" class="java.lang.String"/>
+	<field name="prescricao" class="java.lang.String"/>
+	<field name="cidade" class="java.lang.String"/>
+	<field name="endereco" class="java.lang.String"/>
+	<field name="telefone" class="java.lang.String"/>
+	<field name="ufe" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" forecolor="#C0C0C0" uuid="45d7c629-72f5-4d57-853e-291baf126592"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="163" y="21" width="397" height="45" forecolor="#000000" uuid="af51bb1d-5108-45d5-a54c-a9cf03efaa18"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Receituário Controle Especial]]></text>
+			</staticText>
+			<image>
+				<reportElement x="5" y="16" width="158" height="55" uuid="637f86b0-ddc4-467e-a872-fff991dfeaf8"/>
+				<imageExpression><![CDATA["C:\\RelatorioConsultorio\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="43" forecolor="#CCCCCC" uuid="68e6c929-ba8c-4a97-9ea9-c2c6ebc7b910"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="4" width="128" height="20" uuid="3ab59e03-a481-478b-9097-314fdec15f9f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data do Atendimento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="138" y="4" width="132" height="20" forecolor="#0000FF" uuid="06cf8464-96a0-407c-93c1-e714deb4385e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="25" width="99" height="21" uuid="fd6de835-47c7-4e27-b919-41379813d30d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome Paciente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="138" y="23" width="410" height="20" uuid="06feb9b2-c42f-45ec-ba39-6483f9a9f1d8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomepaciente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="388" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="191" width="555" height="197" uuid="ed1d04a1-6925-429f-ba76-64f7f2a6dd66"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="12" width="376" height="167" uuid="d5e43b13-49c7-4542-8a44-cb4a0ae87405"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="396" y="27" width="128" height="20" uuid="367e0af1-e231-49a2-8e5d-2b5d81e23802"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1ª VIA FARMÁCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="67" width="128" height="20" uuid="def47b44-7095-4a64-9141-8129945e75f9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2ª VIA PACIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="17" width="168" height="20" uuid="454f93fc-5c8a-4064-9421-0e352edddbba"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IDENTIFICAÇÃO EMITENTE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="35" width="375" height="1" uuid="68b1daa5-691b-4300-8898-516bd89d792b"/>
+			</line>
+			<staticText>
+				<reportElement x="6" y="67" width="39" height="20" uuid="841b4a2e-5cd5-4095-87da-5b11c6fe1727"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CRM:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="87" width="20" height="20" uuid="9e9a31bf-a51a-46a1-8922-4f47aaed482e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="107" width="66" height="20" uuid="55e31af9-378c-4e3e-b68f-54b8efaf9455"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="131" width="54" height="20" uuid="13604155-2716-48af-bdce-d4ff1dc58202"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="157" width="54" height="20" uuid="4a48da5a-a787-431b-952a-59f94aa0cb3b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cidade:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="158" width="18" height="20" forecolor="#000000" uuid="8012b101-8dc2-435d-a30d-b2d428ee7d19"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Uf:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="194" width="77" height="21" uuid="6e867643-3b85-4777-9f37-b3ba97286014"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prescrição:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="212" width="77" height="1" uuid="ad53ebb2-04a3-41e3-99aa-bfb886ca3477"/>
+			</line>
+			<textField>
+				<reportElement x="5" y="216" width="543" height="172" uuid="1b851500-30e5-45ce-b727-9c500f2af99e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prescricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="50" width="230" height="20" uuid="49e581cc-7845-461d-98fe-57af224bee17"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomemedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="67" width="100" height="20" uuid="e6fdb611-4c2a-44cb-9e44-15db6db1dc35"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{crm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="88" width="100" height="20" uuid="6c111062-a9f1-40a6-9ce2-ea7e63dc6000"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="107" width="302" height="20" uuid="0ef88f4c-2aaa-4d50-80fa-444d5a129c0b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="132" width="303" height="20" uuid="766deef9-1774-4f1b-ad28-af31df9be599"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="158" width="247" height="20" uuid="4f6aa231-0013-46be-890c-4fa6086496a4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="160" width="37" height="20" uuid="29891e4c-30a3-43c8-b9af-c05aa736a110"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ufe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="47" width="139" height="20" uuid="a7c8e94f-0196-4951-acf9-83ac4f120b38"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome Médico(a) Dr(a) - ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="4" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="219" splitType="Stretch">
+			<staticText>
+				<reportElement x="238" y="153" width="18" height="20" uuid="ea67245b-fc13-4a7c-97b0-76996e91b36f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Uf:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="13" width="168" height="20" uuid="e649e83d-67e9-4706-bd67-bb2bfd5a4e4c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IDENTIFICAÇÃO EMITENTE]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="11" width="304" height="207" uuid="af1222c4-9fbb-4fad-9a8f-b50a136301e9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="127" width="54" height="20" uuid="24281ff6-f495-4f16-baca-236dcba8257f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="97" width="66" height="20" uuid="5622da09-e02c-4ef7-81dc-4b018727e6ff"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="71" width="54" height="20" uuid="823f782b-f6ab-41b8-8808-69d1d9e272be"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RG/CPF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="43" width="39" height="20" uuid="3ca0ef4f-fb24-465f-8dc2-d3d700fd547a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="153" width="54" height="20" uuid="15ccca40-b919-4b79-b43f-e362a4310a4f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cidade:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="35" width="303" height="1" uuid="806f1372-0f3b-4d0a-baf1-91b80ccbe1e1"/>
+			</line>
+			<staticText>
+				<reportElement x="58" y="15" width="212" height="20" uuid="972a8686-bbfe-4c25-ac8d-2e04710ea4b3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IDENTIFICAÇÃO DO COMPRADOR]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="308" y="11" width="248" height="207" uuid="b33eb6d9-c70a-4054-95bd-eecab37cb0c5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="336" y="16" width="212" height="20" uuid="0e1093a8-5498-4239-b30a-e0f19fd46e4f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IDENTIFICAÇÃO DO FORNECEDOR]]></text>
+			</staticText>
+			<line>
+				<reportElement x="308" y="36" width="247" height="1" uuid="eafeef61-cdf3-4973-898a-79fefe74f99a"/>
+			</line>
+			<line>
+				<reportElement x="308" y="198" width="142" height="1" uuid="3010d844-bf9e-4672-9b77-60f55426792f"/>
+			</line>
+			<staticText>
+				<reportElement x="319" y="197" width="126" height="20" uuid="f1e05013-a1bf-46c2-8231-fe297a4faf2c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ass. do Farmacêutico]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yy">
+				<reportElement x="482" y="198" width="74" height="20" forecolor="#0000FF" uuid="e47a2d9a-7a8a-4e1e-9cca-5255efa30dc1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="198" width="32" height="20" uuid="52631e23-0d84-481b-b32b-7350c1742076"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="153" width="21" height="20" uuid="d560b9e2-5ed6-43bf-b6c5-229dab3f164b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Uf:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="53" y="63" width="246" height="1" uuid="53ef43f8-4ef9-4638-932f-2cdb596b94b2"/>
+			</line>
+			<line>
+				<reportElement x="63" y="87" width="236" height="1" uuid="5817764e-d5c4-4581-b3ae-08d868e7ab08"/>
+			</line>
+			<line>
+				<reportElement x="67" y="114" width="232" height="1" uuid="ddc8aa35-d9f9-42e5-a6f1-e56a6b5a0f35"/>
+			</line>
+			<line>
+				<reportElement x="61" y="141" width="238" height="1" uuid="907b2ead-a0e6-4504-a6cf-b1010a0f0e9c"/>
+			</line>
+			<line>
+				<reportElement x="58" y="169" width="158" height="1" uuid="967b9709-e2b3-41c0-ba70-b093d7c6eee2"/>
+			</line>
+			<line>
+				<reportElement x="253" y="169" width="46" height="1" uuid="b7f4a25b-a58b-45a5-9c17-f42377617e5f"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="65" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="11" width="555" height="54" forecolor="#CCCCCC" uuid="99776431-d988-4b5c-a309-f207f69c1711"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="53" y="34" width="448" height="13" uuid="da86a025-e272-4e86-962d-38719fff33e3"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço: Rua 123 N.203 Qd F44 Lt 21 - Setor Sul - Goiânia - GO / Telefone: (62) 3954-1230]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>
